@@ -1,0 +1,18 @@
+import { Component } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+
+@Component({
+  selector: "app-detailmerchant",
+  templateUrl: "./detailmerchant.page.html",
+  styleUrls: ["./detailmerchant.page.scss"],
+})
+export class DetailmerchantPage {
+  datadetail: any;
+
+  constructor(private act: ActivatedRoute, private rtr: Router) {
+    if (this.rtr.getCurrentNavigation()) {
+      this.datadetail = this.rtr.getCurrentNavigation().extras.state.partner;
+    }
+    console.log(this.datadetail);
+  }
+}

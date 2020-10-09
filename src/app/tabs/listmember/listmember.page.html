@@ -1,0 +1,40 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Merchant
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="c-top">
+    <div class="c-content"></div>
+    <div class="content">
+      <div class="logo">List Member</div>
+      <div><ion-icon name="alert-circle-outline"></ion-icon></div>
+    </div>
+  </div>
+
+  <div class="c-galeri">
+    <div class="galeri">
+      <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
+      <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'listmember', item.id_member]">
+      {{item.nama_member}}
+      </ion-item>
+   
+      <div *ngFor="let data of getMember" (click)="openDetail(data)">
+        <table>
+          <tr>
+            <th rowspan="3">
+              <img src="././assets/img/member1.jpeg" />
+            </th>
+            <td><b>{{data.nama_member}}</b></td>
+          </tr>
+          <tr>
+            <td>&nbsp;&nbsp;{{data.profesi_member}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</ion-content>

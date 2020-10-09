@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="c-top">
+    <div class="c-content"></div>
+    <div class="content">
+      <div routerLink="/listgaleri">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </div>
+      <div class="logo">Detail Galeri</div>
+    </div>
+  </div>
+
+  <div class="c-top2">
+    <div class="content2">
+      <div class="logo">
+        <b>{{datadetail.deskripsi_foto}}</b><br />
+        <img
+          src="http://elecompindonesia.com/locusid/assets/img/{{datadetail.foto_galeri}}"
+        /><br />
+      </div>
+      <div class="c-list2">
+        <div>{{datadetail.tanggal_foto}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="c-top3"></div>
+</ion-content>

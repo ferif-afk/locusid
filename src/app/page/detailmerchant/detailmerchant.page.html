@@ -1,0 +1,42 @@
+<ion-content>
+  <div class="c-top">
+    <div class="c-content"></div>
+    <div class="content">
+      <div>
+        <a href="/tabs/merchant"
+          ><ion-icon name="arrow-back-outline"></ion-icon
+        ></a>
+      </div>
+      <div class="logo">Detail Merchant</div>
+    </div>
+  </div>
+
+  <div class="c-img">
+    <img src="https://elecompindonesia.com/locusid/assets/img/foto_profil.jpg" />
+  </div>
+
+  <div class="c-top2">
+    <div class="content2">
+      <div class="logo">
+        <b> {{datadetail.nama_partner}}</b><br />
+        <img
+          src="https://elecompindonesia.com/locusid/assets/img/{{datadetail.logo_partner}}"
+        /><br />
+      </div>
+      <p>
+        <ion-icon name="laptop-outline"></ion-icon> &nbsp;
+        {{datadetail.website_partner}}<br />
+        <ion-icon name="mail-outline"></ion-icon> &nbsp;
+        {{datadetail.email_partner}}<br />
+        <ion-icon name="call-outline"></ion-icon> &nbsp;
+        {{datadetail.kontak_partner}}<br /><br />
+        Deskripsi : <br />
+        {{datadetail.deskripsi_partner}}
+      </p>
+
+      <br />
+    </div>
+  </div>
+
+  <div class="c-top3"></div>
+</ion-content>

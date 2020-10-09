@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="c-top">
+    <div class="c-content"></div>
+    <div class="content">
+      <div routerLink="/tabs">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </div>
+      <div class="logo">Event</div>
+    </div>
+  </div>
+
+  <div class="c-list" *ngFor="let data of getEvent">
+    <div class="list" (click)="openDetail(data)">
+      <img
+        src="http://elecompindonesia.com/locusid/assets/img/{{data.poster_event}}"
+      />
+      <div class="title">
+        <b>{{data.judul_event}}</b><br /><br />
+        <ion-icon name="calendar-outline"></ion-icon>
+        {{data.tanggal_event}}<br />
+        <ion-icon name="time-outline"></ion-icon> {{data.jam_event}}
+      </div>
+    </div>
+  </div>
+</ion-content>

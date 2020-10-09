@@ -1,0 +1,84 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-content>
+  <div class="c-top">
+    <div class="c-content">
+    </div>
+    <div class="content">
+      <div class="logo">Beranda</div>
+      <div><ion-icon name="alert-circle-outline" routerLink="/tentang"></ion-icon></div>
+    </div>
+  </div>
+
+	<div class="c-banner">
+    <ion-slides pager="true" [options]="bannerSlide" *ngIf="getSlider">
+      <ion-slide *ngFor="let data of getSlider">
+        <img src="http://locusid.000webhostapp.com/assets/img/{{data.foto_slider}}">
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="c-promo" >
+    <div class="title"><b>Promo</b><div class="d-title" routerLink="/listpromo">Lihat Semua</div></div>
+    <ion-slides pager="true" [options]="promoSlide" *ngIf="getPromo">
+      <ion-slide *ngFor="let data of getPromo">
+        <img src="http://locusid.000webhostapp.com/assets/img/{{data.poster_promo}}">
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="c-event">
+    <div class="title"><b>Event</b><div class="d-title" routerLink="/listevent">Lihat Semua</div></div>
+    <ion-slides  pager="true" [options]="eventSlide" *ngIf="getEvent">
+      <ion-slide *ngFor="let data of getEvent">
+        <img src="http://locusid.000webhostapp.com/assets/img/{{data.poster_event}}">
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div  class="c-galeri" >
+    <div class="title"><b>Galeri</b><div class="d-title" routerLink="/listgaleri">Lihat Semua</div></div>
+    <div class="galeri" >
+      <div *ngFor="let data of getGaleri">
+        <img src="http://locusid.000webhostapp.com/assets/img/{{data.foto_galeri}}">
+      </div>
+    </div>
+  </div>
+
+  <div class="c-survey">
+    <div class="title"><b>Survey</b></div>
+    <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
+    <form (ngSubmit)="survey()">
+      <ion-item lines="none">
+        <ion-label position="floating">Nama</ion-label>
+        <ion-input type="text" name="nama" [(ngModel)]="nama" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label color="dark" position="floating">Email</ion-label>
+        <ion-input type="text" name="email" [(ngModel)]="email" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="floating">No WhatsApp</ion-label>
+        <ion-input type="text" name="noWa" [(ngModel)]="noWa" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="floating">Pesan</ion-label>
+        <ion-input type="text" name="pesan" [(ngModel)]="pesan" required></ion-input>
+      </ion-item>
+
+      <button type="submit" class="btn" [disabled]="!nama || !email || !noWa || !pesan">
+        <div *ngIf="!isLoading">KIRIM</div>
+        <ion-spinner *ngIf="isLoading" color="white"></ion-spinner>
+      </button>
+      <br>
+    </form>
+  </div>
+</ion-content>

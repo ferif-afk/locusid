@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="c-top">
+    <div class="c-content"></div>
+    <div class="content">
+      <div routerLink="/tabs">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </div>
+      <div class="logo">Promo</div>
+    </div>
+  </div>
+
+  <div class="c-list" *ngFor="let data of getPromo">
+    <div class="list" (click)="openDetail(data)">
+      <img
+        src="http://elecompindonesia.com/locusid/assets/img/{{data.poster_promo}}"
+      />
+      <div>
+        <b>{{data.judul_promo}}</b><br />
+        <!-- {{data.deskripsi_promo}} -->
+        <br />
+        <ion-icon name="calendar-outline"></ion-icon> {{data.tanggal_mulai}}
+      </div>
+    </div>
+  </div>
+</ion-content>

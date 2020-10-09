@@ -1,0 +1,13 @@
+{
+  "appId": "id.locus.locus",
+  "appName": "Locus",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

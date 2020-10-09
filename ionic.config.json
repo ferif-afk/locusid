@@ -1,0 +1,8 @@
+{
+  "name": "Locus",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

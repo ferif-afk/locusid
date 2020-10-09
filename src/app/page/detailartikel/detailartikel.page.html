@@ -1,0 +1,38 @@
+<ion-content>
+  <div class="c-top">
+    <div class="c-content"></div>
+    <div class="content">
+      <div>
+        <a href="/tabs/artikel"
+          ><ion-icon name="arrow-back-outline"></ion-icon
+        ></a>
+      </div>
+      <div class="logo">Detail Artikel</div>
+    </div>
+  </div>
+
+  <div class="c-top2">
+    <div class="content2">
+      <div class="logo">
+        <b> {{datadetail.judul_artikel}} </b><br />
+        <img
+          src="http://elecompindonesia.com/locusid/assets/img/{{datadetail.foto_artikel}}"
+        /><br />
+      </div>
+      <p>
+        <ion-icon name="calendar-outline"></ion-icon> &nbsp;
+        {{datadetail.tanggal_artikel}}<br />
+        <ion-icon name="time-outline"></ion-icon> &nbsp;
+        {{datadetail.artikel_dilihat}} dilihat<br />
+        <ion-icon name="person-circle-outline"></ion-icon> &nbsp;
+        {{datadetail.id_member}} <br /><br />
+        Deskripsi : <br />
+        {{datadetail.deskripsi_artikel}}
+      </p>
+
+      <br />
+    </div>
+  </div>
+
+  <div class="c-top3"></div>
+</ion-content>

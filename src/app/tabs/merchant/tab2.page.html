@@ -1,0 +1,41 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Merchant
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="c-top">
+    <div class="c-content"></div>
+    <div class="content">
+      <div class="logo">Merchant</div>
+      <div><ion-icon name="alert-circle-outline"></ion-icon></div>
+    </div>
+  </div>
+
+  <div class="c-galeri">
+    <div class="galeri">
+      <div *ngFor="let data of getPartner" (click)="openDetail(data)">
+        <table>
+          <tr>
+            <th rowspan="3">
+              <img src="../../../assets/img/{{data.logo_partner}}" />
+            </th>
+            <td><b>{{data.nama_partner}}</b></td>
+          </tr>
+          <tr>
+            <td>{{data.website_partner}}</td>
+          </tr>
+          <tr>
+            <td>
+              <ion-icon name="call-outline"></ion-icon
+              >&nbsp;&nbsp;{{data.kontak_partner}}
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</ion-content>

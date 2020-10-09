@@ -1,0 +1,50 @@
+<!-- <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Artikel
+      </ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+<ion-content>
+  <div class="c-top">
+    <div class="c-content"></div>
+    <div class="content">
+      <div class="logo">Artikel</div>
+      <div><ion-icon name="alert-circle-outline"></ion-icon></div>
+      <!-- <div>
+          <ion-searchbar (ionInput)="FilterJSONData($artikel)"></ion-searchbar>
+        </div> -->
+    </div>
+  </div>
+
+  <div class="c-galeri">
+    <div class="galeri">
+      <div
+        *ngFor="let data of getArtikel"
+        (click)="openDetail(data)"
+        class="judul"
+      >
+        <table>
+          <tr>
+            <th rowspan="3">
+              <img src="../../../assets/img/{{data.foto_artikel}}" />
+            </th>
+            <td><b>{{data.judul_artikel}}</b></td>
+          </tr>
+          <tr>
+            <td>tanggal : {{data.tanggal_artikel}}</td>
+          </tr>
+          <tr>
+            <td>Artikel dilihat : {{data.artikel_dilihat}}</td>
+          </tr>
+        </table>
+      </div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</ion-content>
